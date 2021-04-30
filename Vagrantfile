@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.provision "shell", inline: <<-SHELL
       cd /app/flaskr
-      cp /app/flaskr/app.py /app
+      cp /app/flaskr/app /app
       cp /app/flaskr/app.service /etc/systemd/system/ 
       cp /app/flaskr/app /etc/nginx/sites-available/ 
       ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled 
